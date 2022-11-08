@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIKAP | Login</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/sweetalert2/sweetalert2.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/css/adminlte.min.css') }}">
+    <!--suppress CssUnusedSymbol -->
+    <style>
+        .btn-sikap {
+            background-color: #3293C9;
+            border-color: #3293C9;
+            color: white;
+        }
+
+        .icheck-sikap > input:first-child:checked + input[type=hidden] + label::before, .icheck-sikap > input:first-child:checked + label::before {
+            background-color: #3293C9;
+            border-color: #3293C9;
+        }
+
+        .card-primary.card-outline {
+            border-top: 3px solid #3293C9;
+        }
+
+
+    </style>
+</head>
+<body class="hold-transition login-page" style="height: 100vh!important;">
+<div class="login-box">
+    <div class="card card-outline card-primary">
+        <div class="card-header text-center">
+            <h1>New <b>SIKAP</b></h1>
+        </div>
+        <div class="card-body">
+            <p class="login-box-msg">Sign in to start your session</p>
+            <form method="post">
+                <div class="input-group mb-3">
+                    <input aria-label="off" class="form-control" placeholder="Username" id="username" autofocus>
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input aria-label="off" type="password" id="password" class="form-control" placeholder="Password">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="icheck-sikap">
+                            <input type="checkbox" id="remember" checked>
+                            <input type="hidden" id="f_remember">
+                            <input id="next" type="hidden" value="{{ request.values['next'] }}">
+                            <label for="remember">Remember Me</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <button id="login" class="btn btn-sikap btn-block">Sign In</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/sweetalert2/sweetalert2.all.min.js') }}"></script>
+<script src="{{ url_for('static', filename='dist/js/adminlte.min.js') }}"></script>
+
+<script>
+    $(document).ready(function () {
+
+        let f_username = $("#username"),
+            f_password = $("#password"),
+            remember = $("#remember"),
+            f_remember = $("#f_remember"),
+            b_login = $('#login');
+
+        $(window).keypress(function (key) {
+            if (key.charCode === 13) {
+                key.preventDefault();
+                if (f_username.val() === "") {
+                    f_username.focus()
+                } else if (f_password.val() === "") {
+                    f_password.focus();
+                } else {
+                    b_login.click();
+                }
+            }
+        });
+
+        b_login.on('click', function (e) {
+            e.preventDefault();
+            if (remember.is(":checked")) {
+                f_remember.val("True");
+            } else if (remember.is(":not(:checked)")) {
+                f_remember.val("False");
+            }
+            $(this).blur();
+            Swal.fire({
+                text: "Please wait!",
+                imageUrl: "{{ url_for('static', filename='images/loading.gif') }}",
+                showConfirmButton: false,
+                content: prosesLoginna(),
+            });
+        });
+
+        function prosesLoginna() {
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "{{ url_for('user_v.login') }}");
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.responseType = "json"
+            xhr.send(`username=${f_username.val()}&password=${f_password.val()}&next=${$('#next').val()}&remember=${f_remember.val()}`);
+            xhr.addEventListener("load", () => {
+                let res = xhr.response;
+                if (res === null) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Warning',
+                        text: 'Please contact administrator!',
+                    });
+                } else {
+                    if (res['login_status'] === 'fail' && res['message'] === 'User not found') {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: 'Failed',
+                            text: 'User not found!',
+                        });
+                    } else if (res['login_status'] === 'success') {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Wellcome back!',
+                            showConfirmButton: false,
+                            timer: 1500,
+                        }).then(() => {
+                            location.href = res['next'];
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Warning',
+                            text: 'Please contact administrator!',
+                        });
+                    }
+                }
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
