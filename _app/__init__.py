@@ -24,8 +24,3 @@ from _app.views.main import main_v
 
 app.register_blueprint(user_v)
 app.register_blueprint(main_v)
-
-
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
