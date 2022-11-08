@@ -1,1 +1,157 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIKAP | Dashboard</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/css/adminlte.min.css') }}">
+    <style>
+        .navbar-sikap {
+            background-color: #3293C9;
+            color: #FFFF;
+        }
+
+        .navbar-sikap .navbar-nav .nav-link {
+            color: #FFFF;
+        }
+
+        .small-box {
+            background: #FFFFFF;
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
+            border-radius: 20px;
+        }
+
+        .container {
+            max-width: 100%;
+        }
+
+        .small-box > .small-box-footer {
+            background-color: transparent;
+            color: #0000FF !important;
+        }
+    </style>
+</head>
+<body class="hold-transition layout-top-nav">
+<div class="wrapper">
+
+    <nav class="main-header navbar navbar-expand-md navbar-sikap">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="{{ url_for('static', filename='images/AGP.png') }}" alt="AdminLTE Logo" class="brand-image"
+                     style="opacity: .8">
+            </a>
+
+            <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="{{ url_for('main_v.dashboard') }}" class="nav-link">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('main_v.dashboard') }}" class="nav-link">New Shipment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">My Shipment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Line Up</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false" class="nav-link dropdown-toggle">Report</a>
+                        <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                            <li><a href="#" class="dropdown-item">LINE UP</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a href="#" class="dropdown-item">REPORT PERBULAN</a></li>
+                            <li class="dropdown-divider"></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+            <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+                <li class="nav-item dropdown user-menu">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        <img src="https://via.placeholder.com/728.png/003877/fff?text=A"
+                             class="user-image img-circle elevation-2"
+                             alt="User Image">
+                        <span class="d-none d-md-inline">Alexander Pierce</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+
+                        <li class="user-header bg-primary">
+                            <img src="https://via.placeholder.com/728.png/003877/fff?text=A"
+                                 class="img-circle elevation-2" alt="User Image">
+                            <p>
+                                Alexander Pierce - Web Developer
+                                <small>Member since Nov. 2012</small>
+                            </p>
+                        </li>
+
+                        <li class="user-body">
+                            <div class="row">
+                                <div class="col-4 text-center">
+                                    <a href="#">Followers</a>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <a href="#">Sales</a>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <a href="#">Friends</a>
+                                </div>
+                            </div>
+
+                        </li>
+
+                        <li class="user-footer">
+                            <a href="#" class="btn btn-default btn-flat">Profile</a>
+                            <a href="#" class="btn btn-default btn-flat float-right">Sign out</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="col-lg-4">
+                            <h1>Try</h1>
+                        </div>
+                        <div class="col-lg-8">
+                            <h1>Try</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="float-right d-none d-sm-inline">
+            Anything you want
+        </div>
+        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    </footer>
+</div>
+
+
+<script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='dist/js/adminlte.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/chart.js/Chart.min.js') }}"></script>
+
+</body>
+</html>
