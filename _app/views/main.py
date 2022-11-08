@@ -9,7 +9,7 @@ main_v = Blueprint("main_v", __name__, template_folder="templates")
 @main_v.route("/")
 def dashboard():
     try:
-        return render_template("base.html")
+        return render_template("index.html")
     except TemplateNotFound:
         abort(404)
 

@@ -1,157 +1,394 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SIKAP | Dashboard</title>
+{% extends 'base.html' %}
 
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/fontawesome-free/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='dist/css/adminlte.min.css') }}">
+
+
+{% block css %}
     <style>
-        .navbar-sikap {
-            background-color: #3293C9;
-            color: #FFFF;
-        }
 
-        .navbar-sikap .navbar-nav .nav-link {
-            color: #FFFF;
-        }
-
-        .small-box {
-            background: #FFFFFF;
-            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
-            border-radius: 20px;
-        }
-
-        .container {
-            max-width: 100%;
-        }
-
-        .small-box > .small-box-footer {
-            background-color: transparent;
-            color: #0000FF !important;
-        }
     </style>
-</head>
-<body class="hold-transition layout-top-nav">
-<div class="wrapper">
+{% endblock %}
 
-    <nav class="main-header navbar navbar-expand-md navbar-sikap">
-        <div class="container">
-            <a href="#" class="navbar-brand">
-                <img src="{{ url_for('static', filename='images/AGP.png') }}" alt="AdminLTE Logo" class="brand-image"
-                     style="opacity: .8">
-            </a>
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box">
+                                <div class="inner">
+                                    <p>Total Shipment</p>
 
-            <div class="collapse navbar-collapse order-3" id="navbarCollapse">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="{{ url_for('main_v.dashboard') }}" class="nav-link">Dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ url_for('main_v.dashboard') }}" class="nav-link">New Shipment</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">My Shipment</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Line Up</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false" class="nav-link dropdown-toggle">Report</a>
-                        <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-                            <li><a href="#" class="dropdown-item">LINE UP</a></li>
-                            <li class="dropdown-divider"></li>
-                            <li><a href="#" class="dropdown-item">REPORT PERBULAN</a></li>
-                            <li class="dropdown-divider"></li>
-                        </ul>
-                    </li>
-                </ul>
+                                    <h4 class="text-success">70 Shipment</h4>
 
-            </div>
-
-            <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-                <li class="nav-item dropdown user-menu">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                        <img src="https://via.placeholder.com/728.png/003877/fff?text=A"
-                             class="user-image img-circle elevation-2"
-                             alt="User Image">
-                        <span class="d-none d-md-inline">Alexander Pierce</span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-
-                        <li class="user-header bg-primary">
-                            <img src="https://via.placeholder.com/728.png/003877/fff?text=A"
-                                 class="img-circle elevation-2" alt="User Image">
-                            <p>
-                                Alexander Pierce - Web Developer
-                                <small>Member since Nov. 2012</small>
-                            </p>
-                        </li>
-
-                        <li class="user-body">
-                            <div class="row">
-                                <div class="col-4 text-center">
-                                    <a href="#">Followers</a>
-                                </div>
-                                <div class="col-4 text-center">
-                                    <a href="#">Sales</a>
-                                </div>
-                                <div class="col-4 text-center">
-                                    <a href="#">Friends</a>
+                                    <p>Shipment Per Januari - Juli 2022</p>
                                 </div>
                             </div>
-
-                        </li>
-
-                        <li class="user-footer">
-                            <a href="#" class="btn btn-default btn-flat">Profile</a>
-                            <a href="#" class="btn btn-default btn-flat float-right">Sign out</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-                        <i class="fas fa-th-large"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="content-wrapper">
-        <div class="content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="col-lg-4">
-                            <h1>Try</h1>
                         </div>
-                        <div class="col-lg-8">
-                            <h1>Try</h1>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box">
+                                <div class="inner">
+                                    <p>Total Produksi</p>
+
+                                    <h4 class="text-info">1.870.890.332 M/T</h4>
+
+                                    <p>Shipment Per Januari - Juli 2022</p>
+                                </div>
+                            </div>
                         </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box">
+                                <div class="inner">
+                                    <p></p>
+
+                                    <h4 class="text-success">Rp. 2,874,847,324,00</h4>
+
+                                    <p>Shipment Per Januari - Juli 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="info-box">
+                                            <span class="info-box-icon bg-success"><i
+                                                    class="far fa-envelope"></i></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-number text-success">Rp. 1,324,234,123</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                            <div class="info-box">
+                                <span class="info-box-icon bg-danger"><i class="far fa-envelope"></i></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-number text-danger">Rp. 1,410,321,313</span>
+                                </div>
+                                <!-- /.info-box-content -->
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-primary" style="padding: 1pc">
+                <h5 class="card-title">Jumlah Kapal Yang Dibongkar Pertahun 2022</h5>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="chart">
+                                <canvas id="areaChart"
+                                        style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <!-- small card -->
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <h3 class="text-center">15</h3>
+                                        </div>
+                                        <a href="#" class="small-box-footer text-black">
+                                            <img src="{{ url_for('static', filename='images/ic_boat.png') }}"
+                                                 style="width: 1pc">
+                                            Jan
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <!-- small card -->
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <h3 class="text-center">1</h3>
+                                        </div>
+                                        <a href="#" class="small-box-footer">
+                                            <img src="{{ url_for('static', filename='images/ic_boat.png') }}"
+                                                 style="width: 1pc">
+                                            Feb
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <!-- small card -->
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <h3 class="text-center">9</h3>
+                                        </div>
+                                        <a href="#" class="small-box-footer">
+                                            <img src="{{ url_for('static', filename='images/ic_boat.png') }}"
+                                                 style="width: 1pc">
+                                            Mar
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <!-- small card -->
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <h3 class="text-center">2</h3>
+                                        </div>
+                                        <a href="#" class="small-box-footer">
+                                            <img src="{{ url_for('static', filename='images/ic_boat.png') }}"
+                                                 style="width: 1pc">
+                                            Apr
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <!-- small card -->
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <h3 class="text-center">6</h3>
+                                        </div>
+                                        <a href="#" class="small-box-footer">
+                                            <img src="{{ url_for('static', filename='images/ic_boat.png') }}"
+                                                 style="width: 1pc">
+                                            Mei
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <!-- small card -->
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <h3 class="text-center">8</h3>
+                                        </div>
+                                        <a href="#" class="small-box-footer">
+                                            <img src="{{ url_for('static', filename='images/ic_boat.png') }}"
+                                                 style="width: 1pc">
+                                            Jun
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <!-- small card -->
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <h3 class="text-center">4</h3>
+                                        </div>
+                                        <a href="#" class="small-box-footer">
+                                            <img src="{{ url_for('static', filename='images/ic_boat.png') }}"
+                                                 style="width: 1pc">
+                                            Jul
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <!-- small card -->
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <h3 class="text-center">3</h3>
+                                        </div>
+                                        <a href="#" class="small-box-footer">
+                                            <img src="{{ url_for('static', filename='images/ic_boat.png') }}"
+                                                 style="width: 1pc">
+                                            Agt
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <!-- small card -->
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <h3 class="text-center">3</h3>
+                                        </div>
+                                        <a href="#" class="small-box-footer">
+                                            <img src="{{ url_for('static', filename='images/ic_boat.png') }}"
+                                                 style="width: 1pc">
+                                            Sep
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <!-- small card -->
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <h3 class="text-center">1</h3>
+                                        </div>
+                                        <a href="#" class="small-box-footer">
+                                            <img src="{{ url_for('static', filename='images/ic_boat.png') }}"
+                                                 style="width: 1pc">
+                                            Okt
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <!-- small card -->
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <h3 class="text-center">0</h3>
+                                        </div>
+                                        <a href="#" class="small-box-footer">
+                                            <img src="{{ url_for('static', filename='images/ic_boat.png') }}"
+                                                 style="width: 1pc">
+                                            Nov
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <!-- small card -->
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <h3 class="text-center">5</h3>
+                                        </div>
+                                        <a href="#" class="small-box-footer">
+                                            <img src="{{ url_for('static', filename='images/ic_boat.png') }}"
+                                                 style="width: 1pc">
+                                            Des
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-info" style="padding: 1pc">
+                <h5 class="card-title">Jumlah Cargo Batu Bara yang di bongkar 2022</h5>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="chart">
+                                <canvas id="lineChart"
+                                        style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- small card -->
+                                    <div class="info-box">
+                                                    <span class="info-box-icon"><img
+                                                            src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
+                                        <div class="info-box-content">
+                                            <span class="info-box-number text-success"> 238,342.342 M/T</span>
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-box">
+                                                    <span class="info-box-icon"><img
+                                                            src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
+                                        <div class="info-box-content">
+                                            <span class="info-box-number text-success"> 238,342.342 M/T</span>
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-box">
+                                                    <span class="info-box-icon"><img
+                                                            src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
+                                        <div class="info-box-content">
+                                            <span class="info-box-number text-success"> 238,342.342 M/T</span>
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-box">
+                                                    <span class="info-box-icon"><img
+                                                            src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
+                                        <div class="info-box-content">
+                                            <span class="info-box-number text-success"> 238,342.342 M/T</span>
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-box">
+                                                    <span class="info-box-icon"><img
+                                                            src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
+                                        <div class="info-box-content">
+                                            <span class="info-box-number text-success"> 238,342.342 M/T</span>
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-box">
+                                                    <span class="info-box-icon"><img
+                                                            src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
+                                        <div class="info-box-content">
+                                            <span class="info-box-number text-success"> 238,342.342 M/T</span>
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-box">
+                                                    <span class="info-box-icon"><img
+                                                            src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
+                                        <div class="info-box-content">
+                                            <span class="info-box-number text-success"> 238,342.342 M/T</span>
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-box">
+                                                    <span class="info-box-icon"><img
+                                                            src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
+                                        <div class="info-box-content">
+                                            <span class="info-box-number text-success"> 238,342.342 M/T</span>
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-box">
+                                                    <span class="info-box-icon"><img
+                                                            src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
+                                        <div class="info-box-content">
+                                            <span class="info-box-number text-success"> 238,342.342 M/T</span>
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-box">
+                                                    <span class="info-box-icon"><img
+                                                            src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
+                                        <div class="info-box-content">
+                                            <span class="info-box-number text-success"> 238,342.342 M/T</span>
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-box">
+                                                    <span class="info-box-icon"><img
+                                                            src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
+                                        <div class="info-box-content">
+                                            <span class="info-box-number text-success"> 238,342.342 M/T</span>
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-box">
+                                                    <span class="info-box-icon"><img
+                                                            src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
+                                        <div class="info-box-content">
+                                            <span class="info-box-number text-success"> 238,342.342 M/T</span>
+                                        </div>
+                                        <!-- /.info-box-content -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <footer class="main-footer">
-        <div class="float-right d-none d-sm-inline">
-            Anything you want
-        </div>
-        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-    </footer>
-</div>
-
-
-<script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js') }}"></script>
-<script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ url_for('static', filename='dist/js/adminlte.min.js') }}"></script>
-<script src="{{ url_for('static', filename='plugins/chart.js/Chart.min.js') }}"></script>
-
-</body>
-</html>
+{% endblock %}
