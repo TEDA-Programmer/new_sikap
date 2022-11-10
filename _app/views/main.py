@@ -20,3 +20,11 @@ def shipment():
         return render_template("shipment.html")
     except TemplateNotFound:
         abort(404)
+
+
+@main_v.route("/my-shipment")
+def myshipment():
+    try:
+        return render_template("my_shipment.html")
+    except TemplateNotFound:
+        abort(404)
