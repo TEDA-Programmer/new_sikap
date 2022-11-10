@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <style>
+        span {
+            margin-top: -2pc;
+            float: right;
+            color: #A4A4A4;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h2>LINEUP PLTU ADIPALA</h2>
+                    <span>DAFTAR SHIPMENT DI JETTY PLTU ADIPALA PER TANGGAL 31 JUL 2022 PUKUL 15:35</span>
+                </div>
+            </div>
+
+            <div class="card card-secondary" style="padding: 1pc">
+                <div class="card-header">
+                    <h4>SHIFTING OUT AT JETTY ADIPALA</h4>
+                </div>
+                <div class="card-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>SHIPMENT SHIP</th>
+                            <th>SHIPPER</th>
+                            <th>AGEN</th>
+                            <th>B/L NUMBER</th>
+                            <th>CARGO WEIGHT</th>
+                            <th>PORT OF LOADING</th>
+                            <th>TIME ARRIVAL</th>
+                            <th>TIME BERTHING</th>
+                            <th>TIME SHIFTING OUT</th>
+                            <th>REMARKS</th>
+                            <th>OPTION</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>JOYO BOYO SHIP</td>
+                            <td>JACK SPARROW</td>
+                            <td>PT TARAKAN SUKMA</td>
+                            <td>gf5u786fytft6</td>
+                            <td>4,876,000</td>
+                            <td>TANJUNG BARA INDONESIA</td>
+                            <td>2022-07-13T 09:00</td>
+                            <td>2022-07-13T 12:00</td>
+                            <td>2022-07-13T 14:00</td>
+                            <td>TEST SO</td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="" class="btn btn-info" data-toggle="modal"
+                                       data-target="#modal-xl"><i class="fas fa-edit"></i></a>&nbsp;
+                                    <a href="" class="btn btn-danger"><img src="{{ url_for('static', filename='images/icon_30.png') }}" alt=""></a>&nbsp;
+                                    <a href="" class="btn btn-success"><img src="{{ url_for('static', filename='images/icon_25.png') }}" alt=""></a>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card card-secondary" style="padding: 1pc">
+                <div class="card-header">
+                    <h4>BHERTED AT JETTY ADIPALA</h4>
+                </div>
+                <div class="card-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>SHIPMENT SHIP</th>
+                            <th>SHIPPER</th>
+                            <th>AGEN</th>
+                            <th>B/L NUMBER</th>
+                            <th>CARGO WEIGHT</th>
+                            <th>PORT OF LOADING</th>
+                            <th>TIME ARRIVAL</th>
+                            <th>START FROM ANCHORAGE</th>
+                            <th>TIME BERTED</th>
+                            <th>APROACH TIME</th>
+                            <th>NOR TENDERED</th>
+                            <th>NOR ACCEPTED</th>
+                            <th>COMMENCE DISCHARGE</th>
+                            <th>EST COMPLETED</th>
+                            <th>EST CAST OF JETTY</th>
+                            <th>REMARKS</th>
+                            <th>OPTION</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>JOYO BOYO SHIP</td>
+                            <td>JACK SPARROW</td>
+                            <td>PT TARAKAN SUKMA</td>
+                            <td>gf5u786fytft6</td>
+                            <td>4,876,000</td>
+                            <td>TANJUNG BARA INDONESIA</td>
+                            <td>2022-07-13T 09:00</td>
+                            <td>2022-07-13T 12:00</td>
+                            <td>2022-07-13T 14:00</td>
+                            <td>TEST SO</td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="" class="btn btn-info" data-toggle="modal"
+                                       data-target="#modal-xl"><i class="fas fa-edit"></i></a>&nbsp;
+                                    <a href="" class="btn btn-danger"><i class="fa fa-anchor"></i></a>&nbsp;
+                                    <a href="" class="btn btn-success"><i class="fa fa-anchor"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card card-secondary" style="padding: 1pc">
+                <div class="card-header">
+                    <h4>ANCHORAGE AT OUTBAR ADIPALA, WAIT INSTRUCTION FOR BERTHING</h4>
+                </div>
+                <div class="card-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>SHIPMENT SHIP</th>
+                            <th>SHIPPER</th>
+                            <th>AGEN</th>
+                            <th>B/L NUMBER</th>
+                            <th>CARGO WEIGHT</th>
+                            <th>PORT OF LOADING</th>
+                            <th>TIME ARRIVAL</th>
+                            <th>ESTBERTHED</th>
+                            <th>REMARKS</th>
+                            <th>OPTION</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>JOYO BOYO SHIP</td>
+                            <td>JACK SPARROW</td>
+                            <td>PT TARAKAN SUKMA</td>
+                            <td>gf5u786fytft6</td>
+                            <td>4,876,000</td>
+                            <td>TANJUNG BARA INDONESIA</td>
+                            <td>2022-07-13T 12:00</td>
+                            <td>2022-07-13T 14:00</td>
+                            <td>TEST SO</td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="" class="btn btn-info" data-toggle="modal"
+                                       data-target="#modal-xl"><i class="fa fa-cog" aria-hidden="true"></i></a>&nbsp;
+                                    <a href="" class="btn btn-success"><i class="fas fa-edit"></i></a>&nbsp;
+                                    <a href="" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card-header">
+                    <h4>TUGBOAT AND BARGE LOADING IN VESSEL</h4>
+                </div>
+                <div class="card-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>TUGBOAT-BARGE</th>
+                            <th>SHIPPER</th>
+                            <th>AGEN</th>
+                            <th>ARRIVAL AT ANCHORAGE</th>
+                            <th>TENDER AT VESSEL</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card-header">
+                    <h4>SAILING STS ADIPALA</h4>
+                </div>
+                <div class="card-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>VESSEL STS</th>
+                            <th>SHIPPER</th>
+                            <th>AGEN</th>
+                            <th>B/L NUMBER</th>
+                            <th>CARGO WEIGHT</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -28,3 +28,11 @@ def myshipment():
         return render_template("my_shipment.html")
     except TemplateNotFound:
         abort(404)
+
+
+@main_v.route("/line-up")
+def lineup():
+    try:
+        return render_template("line_up.html")
+    except TemplateNotFound:
+        abort(404)

@@ -347,48 +347,192 @@
                                     <div class="info-box">
                                                     <span class="info-box-icon"><img
                                                             src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
-                                        <div class="info-box-content">
-                                            <span class="info-box-number text-success"> 238,342.342 M/T</span>
-                                        </div>
-                                        <!-- /.info-box-content -->
-                                    </div>
+                                <div class="info-box-content">
+                                    <span class="info-box-number text-success"> 0.000 M/T</span>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="info-box">
-                                                    <span class="info-box-icon"><img
-                                                            src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
-                                        <div class="info-box-content">
-                                            <span class="info-box-number text-success"> 238,342.342 M/T</span>
-                                        </div>
-                                        <!-- /.info-box-content -->
-                                    </div>
+                            </div>
+                            <div class="info-box">
+                                    <span class="info-box-icon">
+                                        <img
+                                                src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-number text-success"> 0.000 M/T</span>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="info-box">
-                                                    <span class="info-box-icon"><img
-                                                            src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
-                                        <div class="info-box-content">
-                                            <span class="info-box-number text-success"> 238,342.342 M/T</span>
-                                        </div>
-                                        <!-- /.info-box-content -->
-                                    </div>
+                            </div>
+                            <div class="info-box">
+                                    <span class="info-box-icon">
+                                        <img src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-number text-success"> 2.000 M/T</span>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="info-box">
-                                                    <span class="info-box-icon"><img
-                                                            src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
-                                        <div class="info-box-content">
-                                            <span class="info-box-number text-success"> 238,342.342 M/T</span>
-                                        </div>
-                                        <!-- /.info-box-content -->
-                                    </div>
+                            </div>
+                            <div class="info-box">
+                                <span class="info-box-icon">
+                                    <img src="{{ url_for('static', filename='images/ic_cargo.png') }}"></span>
+                                <div class="info-box-content">
+                                    <span class="info-box-number text-success"> 0.000 M/T</span>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        $(document).ready(function () {
+            $.sum = function (arr) {
+                let r = 0;
+                $.each(arr, function (i, v) {
+                    r += +v;
+                });
+                return r;
+            }
+
+            function updateChart() {
+                $.ajax({
+                    url: "{{ url_for('main_v.data_chart') }}",
+                    success: function (res) {
+                        let dship = res['data_ship'],
+                            dcargo = res['data_cargo'],
+                            bulans = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                            areaChartCanvas = $('#kapalChart').get(0).getContext('2d'),
+                            lineChartCanvas = $('#cargoBabaChart').get(0).getContext('2d')
+
+                        new Chart(areaChartCanvas, {
+                            type: 'line',
+                            data: {
+                                labels: bulans,
+                                datasets: [
+                                    {
+                                        label: 'Completed Ship',
+                                        backgroundColor: 'rgba(60,141,188,0.2)',
+                                        borderColor: 'rgba(60,141,188,0.8)',
+                                        pointColor: '#FFFFFF',
+                                        pointStrokeColor: 'rgba(60,141,188,1)',
+                                        pointHighlightFill: '#fff',
+                                        pointHighlightStroke: 'rgba(60,141,188,1)',
+                                        data: dship
+                                    },
+                                ]
+                            },
+                            options: {
+                                maintainAspectRatio: false,
+                                responsive: true,
+                                legend: {
+                                    display: false
+                                },
+                                scales: {
+                                    xAxes: [{
+                                        gridLines: {
+                                            display: false,
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        gridLines: {
+                                            display: false,
+                                        }
+                                    }]
+                                }
+                            }
+                        });
+                        new Chart(lineChartCanvas, {
+                            type: 'line',
+                            data: {
+                                labels: bulans,
+                                datasets: [
+                                    {
+                                        label: 'Completed coal Cargo',
+                                        backgroundColor: 'rgba(14, 214, 46, 0.2)',
+                                        borderColor: 'rgba(14, 214, 46, 0.8)',
+                                        pointColor: '#FFFFFF',
+                                        pointStrokeColor: 'rgba(14, 214, 46, 1)',
+                                        pointHighlightFill: '#fff',
+                                        pointHighlightStroke: 'rgba(14, 214, 46, 1)',
+                                        data: dcargo
+                                    }
+                                ]
+                            },
+                            options: {
+                                maintainAspectRatio: false,
+                                responsive: true,
+                                legend: {
+                                    display: false
+                                },
+                                scales: {
+                                    xAxes: [{
+                                        gridLines: {
+                                            display: false,
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        gridLines: {
+                                            display: false,
+                                        }
+                                    }]
+                                }
+                            }
+                        });
+                        setTimeout(updateChart, (3600 * 1000)) //update per 3600 detik = 1 jam
+                        console.log($.sum(res['data_ship']))
+                        let isi_ship = "",
+                            isi_cargo1 = "",
+                            isi_cargo2 = ""
+                        $.each(res['data_ship'], function (i, v) {
+                            isi_ship += `
+                                <div class="col-md-3">
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <h3 class="text-center">${v}</h3>
+                                        </div>
+                                        <a href="#" class="small-box-footer text-black">
+                                            <img src="{{ url_for('static', filename='images/ic_boat.png') }}"
+                                                 style="width: 1pc">
+                                            ${bulans[i]}
+                                        </a>
+                                    </div>
+                                </div>
+                            `;
+                        });
+                        $.each(res['data_cargo'], function (i, v) {
+                            if (0 < i && i < 7) {
+                                isi_cargo1 += `
+                                    <div class="info-box">
+                                        <span class="info-box-icon">
+                                            <img src="{{ url_for('static', filename='images/ic_cargo.png') }}">
+                                        </span>
+                                        <div class="info-box-content">
+                                            <span class="info-box-number text-success"> ${v} M/T</span>
+                                        </div>
+                                    </div>
+                                `;
+                            } else {
+                                isi_cargo2 += `
+                                    <div class="info-box">
+                                        <span class="info-box-icon">
+                                            <img src="{{ url_for('static', filename='images/ic_cargo.png') }}">
+                                        </span>
+                                        <div class="info-box-content">
+                                            <span class="info-box-number text-success"> ${v} M/T</span>
+                                        </div>
+                                    </div>
+                                `;
+                            }
+                        });
+
+                        $("#total_shipment").text(`${$.sum(res['data_ship'])} Shipments`)
+                        $("#ship_month").html(isi_ship)
+                        $("#cargo1_month").html(isi_cargo1)
+                        $("#cargo2_month").html(isi_cargo2)
+                    }
+                });
+            }
+
+            updateChart();
+
+        })
+    </script>
 {% endblock %}
