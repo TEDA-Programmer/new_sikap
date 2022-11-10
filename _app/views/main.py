@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from flask import Blueprint, render_template, abort
 from jinja2 import TemplateNotFound
 
@@ -9,9 +11,17 @@ main_v = Blueprint("main_v", __name__, template_folder="templates")
 @main_v.route("/")
 def dashboard():
     try:
-        return render_template("index.html")
+        tgl = datetime.now()
+        return render_template("index.html", bulan=tgl.strftime("%b"))
     except TemplateNotFound:
         abort(404)
+
+
+@main_v.route("/data_chart")
+def data_chart():
+    return {"data_ship": [15, 1, 9, 2, 6, 8, 4, 3, 3, 1, 0, 0],
+            "data_cargo": [275590659 / 1000, 212933143 / 1000, 240744035 / 1000, 223580065 / 1000, 226774140 / 1000,
+                           187555053 / 1000, 130272911 / 1000, 0, 0, 0, 2, 0]}
 
 
 @main_v.route("/shipment")
