@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>SPB Long Towing</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-secondary" style="padding: 1pc">
+                <div class="card-header">
+                    <h4>DATA SHIPMENT ID : 98656</h4>
+                </div>
+                <div class="card-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>SHIPMENT SHIP</th>
+                            <th>SHIP OWNER</th>
+                            <th>SHIPPER</th>
+                            <th>AGEN</th>
+                            <th>BILL OF LADING</th>
+                            <th>CARGO(BL) M/T</th>
+                            <th>PELABUHAN MUAT/VESSEL STS</th>
+                            <th>TIME ANCHORAGE</th>
+                            <th>TIME BERTHED</th>
+                            <th>KETERANGAN</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>SPB JAYAKARTA 33</td>
+                            <td>-</td>
+                            <td>CV. CINTA PURI PRATAMA QQ PT. REKAMITRA CIPTA TAMBANG</td>
+                            <td>ALFIAN BUDIARTO</td>
+                            <td>24739834</td>
+                            <td>28,000,000 M/T</td>
+                            <td>TANJUNG BARA INDONESIA</td>
+                            <td>2022-07-13T 09:00</td>
+                            <td>2022-07-13T 12:00</td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="" class="btn btn-info" data-toggle="modal"
+                                       data-target="#modal-xl"><img class="img-sm"
+                                                                    src="{{ url_for('static', filename='images/Vector.png') }}"
+                                                                    alt=""></a>&nbsp;
+                                    <a href="" class="btn btn-danger"><img class="img-sm"
+                                                                           src="{{ url_for('static', filename='images/icon_30.png') }}"
+                                                                           alt=""></a>&nbsp;
+                                    <a href="" class="btn btn-success"><img class="img-sm"
+                                                                            src="{{ url_for('static', filename='images/icon_25.png') }}"
+                                                                            alt=""></a>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card card-secondary" style="padding: 1pc">
+                <div class="card-header">
+                    <h4>FORM - OTW</h4>
+                </div>
+                <div class="card-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>TIME DEPARTURE PORT OF LOAD</th>
+                            <th>E T AANCHORAGE</th>
+                            <th>NOTE - OTW</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2022-11-11</td>
+                            <td>2022-11-11</td>
+                            <td>otw</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card card-secondary" style="padding: 1pc">
+                <div class="card-header">
+                    <h4>FORM - ANCHORAGE</h4>
+                </div>
+                <div class="card-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>TIME ARRIVAL ANCHORAGE</th>
+                            <th>EST BERTHED</th>
+                            <th>REMARK</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2022-11-11</td>
+                            <td>2022-11-11</td>
+                            <td>otw</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card card-secondary" style="padding: 1pc">
+                <div class="card-header">
+                    <h4>FORM - BERTHED</h4>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-header">
+                            <label>TUGBOAT ASSIT IN</label>
+                        </div>
+                        <div class="card-body">
+                            <table id="example2" class="table table-bordered table-hover">
+                                <thead>
+                                <tr>
+                                    <th>N0</th>
+                                    <th>NAMA TUGBOAT</th>
+                                    <th>MASTER TUGBOAT</th>
+                                    <th>START TIME</th>
+                                    <th>END TIME</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-header">
+                            <label>PANDU ASSIT IN</label>
+                        </div>
+                        <div class="card-body">
+                            <table id="example2" class="table table-bordered table-hover">
+                                <thead>
+                                <tr>
+                                    <th>TUGBOAT ASSIT IN</th>
+                                    <th>EST BERTHED</th>
+                                    <th>REMARK</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>2022-11-11</td>
+                                    <td>2022-11-11</td>
+                                    <td>otw</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>TIME ARRIVAL ANCHORAGE</th>
+                            <th>EST BERTHED</th>
+                            <th>REMARK</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2022-11-11</td>
+                            <td>2022-11-11</td>
+                            <td>otw</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

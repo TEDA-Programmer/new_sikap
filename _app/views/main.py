@@ -46,3 +46,11 @@ def lineup():
         return render_template("line_up.html")
     except TemplateNotFound:
         abort(404)
+
+
+@main_v.route("/long-towing")
+def longtowing():
+    try:
+        return render_template("long_towing.html")
+    except TemplateNotFound:
+        abort(404)
