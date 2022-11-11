@@ -58,10 +58,36 @@
                 </div>
                 <div class="col-lg-8">
                     <div class="card bg-white" style="padding: 1pc">
-                        <h5 class="card-title">New Shipment/Tugboat (TB) dan Tongkang (BG) ke PLTU</h5>
-                        <div class="btn-na" style="align-self: flex-end;">
-                            <button class="btn btn-info" style="margin-top: -2pc">Data Master</button>
-                        </div>
+                        <p class="text-left">New Shipment/Tugboat (TB) dan Tongkang (BG) ke PLTU</p>
+                        <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto" style="margin-top: -2.5pc">
+                            <li class="nav-item dropdown user-menu">
+                                <a href="#" class="nav-link dropdown-toggle btn btn-info" data-toggle="dropdown">
+                                    Data Master
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                                    <li class="user-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <a href="#" data-toggle="modal"
+                                                   data-target="#modal-tbo">Data Tugboat</a>
+                                            </div>
+                                            <div class="col-12">
+                                                <a href="#" data-toggle="modal"
+                                                   data-target="#modal-tk">Data Tongkang</a>
+                                            </div>
+                                            <div class="col-12" data-toggle="modal"
+                                                   data-target="#modal-sh">
+                                                <a href="#">Data Shipper</a>
+                                            </div>
+                                            <div class="col-12" data-toggle="modal"
+                                                   data-target="#modal-ag">
+                                                <a href="#">Data Agen</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                     <div class="card bg-white" style="padding: 1pc">
                         <div class="card-body">
@@ -160,6 +186,629 @@
             </div>
         </div>
     </div>
+
+
+    <!-- MODAL TUGBOAT -->
+    <div class="modal fade" id="modal-tbo">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header bg-secondary">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p>Data Tugboat</p>
+                                        </div>
+                                        <div class="col-md-6 text-right">
+                                            <a href="#" data-toggle="modal" data-target="#modal-tb"
+                                               class="btn btn-success">Tambah Data</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered-0 table-hover">
+                                            <thead hidden>
+                                            <tr>
+                                                <th>Nama</th>
+                                                <th>action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>Data tugboat</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data tugboat</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data tugboat</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data tugboat</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <div class="modal fade" id="modal-tb">
+        <div class="modal-dialog modal-tb">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <label>TAMBAH DATA TUGBOAT</label>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" id="md_0">
+                                    <div class="row">
+                                        <div class="col-md-4" id="gm">
+                                            <img src="{{ url_for('static', filename='images/icon_21.png') }}" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <strong>PENTING !!</strong>
+                                            Demi kenyaman data bersama agar user lebih bijak dan bertanggung jawab dalam
+                                            pengolahan data.
+                                            <br>
+                                            TERIMAKASIH
+                                            <strong>MANAGEMENT PT ADHIGUNA PUTERA</strong>
+                                            2022
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="nama_tugboat">NAMA TUGBOAT </label>
+                                        <input type="text" class="form-control" id="nama_tugboat"
+                                               placeholder="tambah nama tugboat">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pemilik_tugboat">PEMILIK TUGBOAT</label>
+                                        <input type="text" class="form-control" id="pemilik_tugboat"
+                                               placeholder="tambah pemilik tugboat">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="keterangan">KETERANGAN</label>
+                                        <input type="text" class="form-control" id="keterangan"
+                                               placeholder="masukan keterangan">
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-info" type="submit">Send</button>
+                                    <button class="btn btn-secondary" type="reset">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- END MODAL -->
+
+    <!-- MODAL TONGKANG -->
+    <div class="modal fade" id="modal-tk">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header bg-secondary">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p>DATA TONGKANG</p>
+                                        </div>
+                                        <div class="col-md-6 text-right">
+                                            <a href="#" data-toggle="modal" data-target="#modal-tka"
+                                               class="btn btn-success">Tambah Data</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered-0 table-hover">
+                                            <thead hidden>
+                                            <tr>
+                                                <th>Nama</th>
+                                                <th>action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>BG ARMADA MAJU 2702</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data tongkang</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data tongkang</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data tongkang</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-tka">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="width: 43rem">
+                <div class="modal-header">
+                    <label>TAMBAH DATA TONGKANG</label>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" id="md_0">
+                                    <div class="row">
+                                        <div class="col-md-4" id="gm">
+                                            <img src="{{ url_for('static', filename='images/icon_21.png') }}" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <strong>PENTING !!</strong>
+                                            Demi kenyaman data bersama agar user lebih bijak dan bertanggung jawab dalam
+                                            pengolahan data.
+                                            <br>
+                                            TERIMAKASIH
+                                            <strong>MANAGEMENT PT ADHIGUNA PUTERA</strong>
+                                            2022
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="nama_tongkang">NAMA TONGKANG </label>
+                                        <input type="text" class="form-control" id="nama_tongkang"
+                                               placeholder="tambah nama tongkang">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bendera">BENDERA</label>
+                                        <input type="text" class="form-control" id="bendera"
+                                               placeholder="Masukan bendera">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="kelas">KELAS</label>
+                                        <input type="text" class="form-control" id="kelas"
+                                               placeholder="masukan kelas">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tahun">TAHUN</label>
+                                        <input type="date" class="form-control" id="tahun"
+                                               placeholder="masukan tahun">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pemilik_tongkang">PEMILIK</label>
+                                        <input type="text" class="form-control" id="pemilik_tongkang"
+                                               placeholder="masukan pemilik tongkang">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="grt">GRT</label>
+                                                <input type="text" class="form-control" id="grt"
+                                                       placeholder="masukan grt">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="dwt">DWT</label>
+                                                <input type="text" class="form-control" id="dwt"
+                                                       placeholder="masukan dwt">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="sarat_muka">SARAT MUKA</label>
+                                                <input type="text" class="form-control" id="sarat_muka"
+                                                       placeholder="masukan sarat_muka">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="loa">LOA</label>
+                                                <input type="text" class="form-control" id="loa"
+                                                       placeholder="masukan loa">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="nrt">NRT</label>
+                                                <input type="text" class="form-control" id="nrt"
+                                                       placeholder="masukan nrt">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="sarat_belakang">SARAT BELAKANG</label>
+                                                <input type="text" class="form-control" id="sarat_belakang"
+                                                       placeholder="masukan sarat_belakang">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="keterangan">KETERANGAN</label>
+                                        <input type="text" class="form-control" id="keterangan"
+                                               placeholder="masukan keterangan">
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-info" type="submit">Send</button>
+                                    <button class="btn btn-secondary" type="reset">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- END MODAL -->
+
+    <!-- MODAL SHIPPER -->
+    <div class="modal fade" id="modal-sh">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header bg-secondary">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p>Data Shipper</p>
+                                        </div>
+                                        <div class="col-md-6 text-right">
+                                            <a href="#" data-toggle="modal" data-target="#modal-sp"
+                                               class="btn btn-success">Tambah Data</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered-0 table-hover">
+                                            <thead hidden>
+                                            <tr>
+                                                <th>Nama</th>
+                                                <th>action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>Alfian Budiarto</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data shipper</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data shipper</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data shipper</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <div class="modal fade" id="modal-sp">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <label>TAMBAH DATA SHIPPER</label>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" id="md_0">
+                                    <div class="row">
+                                        <div class="col-md-4" id="gm">
+                                            <img src="{{ url_for('static', filename='images/icon_21.png') }}" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <strong>PENTING !!</strong>
+                                            Demi kenyaman data bersama agar user lebih bijak dan bertanggung jawab dalam
+                                            pengolahan data.
+                                            <br>
+                                            TERIMAKASIH
+                                            <strong>MANAGEMENT PT ADHIGUNA PUTERA</strong>
+                                            2022
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="nama_shipper">NAMA SHIPPER </label>
+                                        <input type="text" class="form-control" id="nama_shipper"
+                                               placeholder="tambah nama shipper">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="alamat_shipper">ALAMAT SHIPPER</label>
+                                        <input type="text" class="form-control" id="alamat_shipper"
+                                               placeholder="tambah alamat shipper">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="telepon_shipper">TELEPHONE SHIPPER</label>
+                                        <input type="number" class="form-control" id="telepon_shipper"
+                                               placeholder="masukan telepon shipper">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="fax_shipper">FAX SHIPPER</label>
+                                        <input type="text" class="form-control" id="fax_shipper"
+                                               placeholder="masukan fax shipper">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email_shipper">EMAIL SHIPPER</label>
+                                        <input type="text" class="form-control" id="email_shipper"
+                                               placeholder="masukan email shipper">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pic_shipper">PIC SHIPPER</label>
+                                        <input type="text" class="form-control" id="pic_shipper"
+                                               placeholder="masukan pic shipper">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="keterangan">KETERANGAN</label>
+                                        <input type="text" class="form-control" id="keterangan"
+                                               placeholder="masukan keterangan">
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-info" type="submit">Send</button>
+                                    <button class="btn btn-secondary" type="reset">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- END MODAL -->
+
+    <!-- MODAL AGEN -->
+    <div class="modal fade" id="modal-ag">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header bg-secondary">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p>DATA AGEN</p>
+                                        </div>
+                                        <div class="col-md-6 text-right">
+                                            <a href="#" data-toggle="modal" data-target="#modal-an"
+                                               class="btn btn-success">Tambah Data</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered-0 table-hover">
+                                            <thead hidden>
+                                            <tr>
+                                                <th>Nama</th>
+                                                <th>action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>PT. TARAKA SAMUDRA SEJAHTERA</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data agen</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data agen</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data agen</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <div class="modal fade" id="modal-an">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <label>TAMBAH DATA AGEN</label>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" id="md_0">
+                                    <div class="row">
+                                        <div class="col-md-4" id="gm">
+                                            <img src="{{ url_for('static', filename='images/icon_21.png') }}" alt="">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <strong>PENTING !!</strong>
+                                            Demi kenyaman data bersama agar user lebih bijak dan bertanggung jawab dalam
+                                            pengolahan data.
+                                            <br>
+                                            TERIMAKASIH
+                                            <strong>MANAGEMENT PT ADHIGUNA PUTERA</strong>
+                                            2022
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="nama_agen">NAMA AGEN </label>
+                                        <input type="text" class="form-control" id="nama_agen"
+                                               placeholder="tambah nama agen">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="alamat_agen">ALAMAT AGEN</label>
+                                        <input type="text" class="form-control" id="alamat_agen"
+                                               placeholder="tambah alamat agen">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="telepon_agen">TELEPHONE AGEN</label>
+                                        <input type="number" class="form-control" id="telepon_agen"
+                                               placeholder="masukan telepon agen">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="fax_agen">FAX AGEN</label>
+                                        <input type="text" class="form-control" id="fax_agen"
+                                               placeholder="masukan fax agen">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email_agen">EMAIL AGEN</label>
+                                        <input type="text" class="form-control" id="email_agen"
+                                               placeholder="masukan email agen">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pic_agen">PIC AGEN</label>
+                                        <input type="text" class="form-control" id="pic_agen"
+                                               placeholder="masukan pic agen">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="keterangan">KETERANGAN</label>
+                                        <input type="text" class="form-control" id="keterangan"
+                                               placeholder="masukan keterangan">
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-info" type="submit">Send</button>
+                                    <button class="btn btn-secondary" type="reset">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- END MODEL -->
+
 {% endblock %}
 
 {% block script %}
