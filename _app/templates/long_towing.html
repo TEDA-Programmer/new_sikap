@@ -21,49 +21,51 @@
                     <h4>DATA SHIPMENT ID : 98656</h4>
                 </div>
                 <div class="card-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th>SHIPMENT SHIP</th>
-                            <th>SHIP OWNER</th>
-                            <th>SHIPPER</th>
-                            <th>AGEN</th>
-                            <th>BILL OF LADING</th>
-                            <th>CARGO(BL) M/T</th>
-                            <th>PELABUHAN MUAT/VESSEL STS</th>
-                            <th>TIME ANCHORAGE</th>
-                            <th>TIME BERTHED</th>
-                            <th>KETERANGAN</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>SPB JAYAKARTA 33</td>
-                            <td>-</td>
-                            <td>CV. CINTA PURI PRATAMA QQ PT. REKAMITRA CIPTA TAMBANG</td>
-                            <td>ALFIAN BUDIARTO</td>
-                            <td>24739834</td>
-                            <td>28,000,000 M/T</td>
-                            <td>TANJUNG BARA INDONESIA</td>
-                            <td>2022-07-13T 09:00</td>
-                            <td>2022-07-13T 12:00</td>
-                            <td>
-                                <div class="btn-group">
-                                    <a href="" class="btn btn-info" data-toggle="modal"
-                                       data-target="#modal-xl"><img class="img-sm"
-                                                                    src="{{ url_for('static', filename='images/Vector.png') }}"
-                                                                    alt=""></a>&nbsp;
-                                    <a href="" class="btn btn-danger"><img class="img-sm"
-                                                                           src="{{ url_for('static', filename='images/icon_30.png') }}"
-                                                                           alt=""></a>&nbsp;
-                                    <a href="" class="btn btn-success"><img class="img-sm"
-                                                                            src="{{ url_for('static', filename='images/icon_25.png') }}"
-                                                                            alt=""></a>
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>SHIPMENT SHIP</th>
+                                <th>SHIP OWNER</th>
+                                <th>SHIPPER</th>
+                                <th>AGEN</th>
+                                <th>BILL OF LADING</th>
+                                <th>CARGO(BL) M/T</th>
+                                <th>PELABUHAN MUAT/VESSEL STS</th>
+                                <th>TIME ANCHORAGE</th>
+                                <th>TIME BERTHED</th>
+                                <th>KETERANGAN</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>SPB JAYAKARTA 33</td>
+                                <td>-</td>
+                                <td>CV. CINTA PURI PRATAMA QQ PT. REKAMITRA CIPTA TAMBANG</td>
+                                <td>ALFIAN BUDIARTO</td>
+                                <td>24739834</td>
+                                <td>28,000,000 M/T</td>
+                                <td>TANJUNG BARA INDONESIA</td>
+                                <td>2022-07-13T 09:00</td>
+                                <td>2022-07-13T 12:00</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="" class="btn btn-info" data-toggle="modal"
+                                           data-target="#modal-xl"><img class="img-sm"
+                                                                        src="{{ url_for('static', filename='images/Vector.png') }}"
+                                                                        alt=""></a>&nbsp;
+                                        <a href="" class="btn btn-danger"><img class="img-sm"
+                                                                               src="{{ url_for('static', filename='images/icon_30.png') }}"
+                                                                               alt=""></a>&nbsp;
+                                        <a href="" class="btn btn-success"><img class="img-sm"
+                                                                                src="{{ url_for('static', filename='images/icon_25.png') }}"
+                                                                                alt=""></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <!-- End -->
@@ -74,22 +76,24 @@
                     <h4>FORM - OTW</h4>
                 </div>
                 <div class="card-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th>TIME DEPARTURE PORT OF LOAD</th>
-                            <th>ETA ANCHORAGE</th>
-                            <th>NOTE - OTW</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>2022-11-11</td>
-                            <td>2022-11-11</td>
-                            <td>otw</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>TIME DEPARTURE PORT OF LOAD</th>
+                                <th>ETA ANCHORAGE</th>
+                                <th>NOTE - OTW</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>2022-11-11</td>
+                                <td>2022-11-11</td>
+                                <td>otw</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <!-- End -->
@@ -100,22 +104,24 @@
                     <h4>FORM - ANCHORAGE</h4>
                 </div>
                 <div class="card-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th>TIME ARRIVAL ANCHORAGE</th>
-                            <th>EST BERTHED</th>
-                            <th>REMARK</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>2022-11-11</td>
-                            <td>2022-11-11</td>
-                            <td>otw</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>TIME ARRIVAL ANCHORAGE</th>
+                                <th>EST BERTHED</th>
+                                <th>REMARK</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>2022-11-11</td>
+                                <td>2022-11-11</td>
+                                <td>otw</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <!-- End -->
@@ -131,26 +137,28 @@
                             <label>TUGBOAT ASSIT IN</label>
                         </div>
                         <div class="card-body">
-                            <table id="example2" class="table table-bordered table-hover">
-                                <thead>
-                                <tr>
-                                    <th>N0</th>
-                                    <th>NAMA TUGBOAT</th>
-                                    <th>MASTER TUGBOAT</th>
-                                    <th>START TIME</th>
-                                    <th>END TIME</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table id="myTable" class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>N0</th>
+                                        <th>NAMA TUGBOAT</th>
+                                        <th>MASTER TUGBOAT</th>
+                                        <th>START TIME</th>
+                                        <th>END TIME</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -158,68 +166,74 @@
                             <label>PANDU ASSIT IN</label>
                         </div>
                         <div class="card-body">
-                            <table id="example2" class="table table-bordered table-hover">
-                                <thead>
-                                <tr>
-                                    <th>NO</th>
-                                    <th>PANDU NAME</th>
-                                    <th>TIME UP</th>
-                                    <th>TIME DOWN</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table id="myTable" class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>NO</th>
+                                        <th>PANDU NAME</th>
+                                        <th>TIME UP</th>
+                                        <th>TIME DOWN</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th>TIME START FROM ANCHORAGE</th>
-                            <th>TIME BERTHED</th>
-                            <th>APPROACH TIME</th>
-                            <th>NOR TENDERED</th>
-                            <th>NOR ACCEPTED</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>2022-11-10T10:32</td>
-                            <td>2022-11-11</td>
-                            <td>0:0</td>
-                            <td>2022-11-10T10:32</td>
-                            <td>2022-11-10T10:32</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>TIME START FROM ANCHORAGE</th>
+                                <th>TIME BERTHED</th>
+                                <th>APPROACH TIME</th>
+                                <th>NOR TENDERED</th>
+                                <th>NOR ACCEPTED</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>2022-11-10T10:32</td>
+                                <td>2022-11-11</td>
+                                <td>0:0</td>
+                                <td>2022-11-10T10:32</td>
+                                <td>2022-11-10T10:32</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div class="card-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th>COMMENCE DISCHARGE</th>
-                            <th>EST COMPLETED</th>
-                            <th>EST CAST OF</th>
-                            <th>REMARK - BERTHED</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>2022-11-10T10:32</td>
-                            <td>2022-11-11</td>
-                            <td>2022-11-11</td>
-                            <td>BERTHED</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>COMMENCE DISCHARGE</th>
+                                <th>EST COMPLETED</th>
+                                <th>EST CAST OF</th>
+                                <th>REMARK - BERTHED</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>2022-11-10T10:32</td>
+                                <td>2022-11-11</td>
+                                <td>2022-11-11</td>
+                                <td>BERTHED</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <!-- End -->
@@ -235,26 +249,28 @@
                             <label>TUGBOAT ASSIT IN</label>
                         </div>
                         <div class="card-body">
-                            <table id="example2" class="table table-bordered table-hover">
-                                <thead>
-                                <tr>
-                                    <th>N0</th>
-                                    <th>TUGBOAT NAME</th>
-                                    <th>MASTER TUGBOAT</th>
-                                    <th>START TIME</th>
-                                    <th>END TIME</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table id="myTable" class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>N0</th>
+                                        <th>TUGBOAT NAME</th>
+                                        <th>MASTER TUGBOAT</th>
+                                        <th>START TIME</th>
+                                        <th>END TIME</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -262,46 +278,50 @@
                             <label>PANDU ASSIT IN</label>
                         </div>
                         <div class="card-body">
-                            <table id="example2" class="table table-bordered table-hover">
-                                <thead>
-                                <tr>
-                                    <th>NO</th>
-                                    <th>PANDU NAME</th>
-                                    <th>TIME UP</th>
-                                    <th>TIME DOWN</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table id="myTable" class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>NO</th>
+                                        <th>PANDU NAME</th>
+                                        <th>TIME UP</th>
+                                        <th>TIME DOWN</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th>CAST OF JETTY</th>
-                            <th>COMMENCE COMPLETED</th>
-                            <th>FINAL DRAUGHTSURVEY</th>
-                            <th>REMARK - CAST OF JETTY</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>CAST OF JETTY</th>
+                                <th>COMMENCE COMPLETED</th>
+                                <th>FINAL DRAUGHTSURVEY</th>
+                                <th>REMARK - CAST OF JETTY</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <!-- End -->
@@ -317,26 +337,28 @@
                             <label>TUGBOAT ASSIT IN</label>
                         </div>
                         <div class="card-body">
-                            <table id="example2" class="table table-bordered table-hover">
-                                <thead>
-                                <tr>
-                                    <th>N0</th>
-                                    <th>TUGBOAT NAME</th>
-                                    <th>MASTER TUGBOAT</th>
-                                    <th>START TIME</th>
-                                    <th>END TIME</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table id="myTable" class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>N0</th>
+                                        <th>TUGBOAT NAME</th>
+                                        <th>MASTER TUGBOAT</th>
+                                        <th>START TIME</th>
+                                        <th>END TIME</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -344,42 +366,46 @@
                             <label>PANDU ASSIT IN</label>
                         </div>
                         <div class="card-body">
-                            <table id="example2" class="table table-bordered table-hover">
-                                <thead>
-                                <tr>
-                                    <th>NO</th>
-                                    <th>PANDU NAME</th>
-                                    <th>TIME UP</th>
-                                    <th>TIME DOWN</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table id="myTable" class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>NO</th>
+                                        <th>PANDU NAME</th>
+                                        <th>TIME UP</th>
+                                        <th>TIME DOWN</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th>TIME SHIFTING IN</th>
-                            <th>REMARK - SHIFTING IN</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>-</td>
-                            <td>-</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>TIME SHIFTING IN</th>
+                                <th>REMARK - SHIFTING IN</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <!-- End -->
@@ -395,26 +421,28 @@
                             <label>TUGBOAT ASSIT IN</label>
                         </div>
                         <div class="card-body">
-                            <table id="example2" class="table table-bordered table-hover">
-                                <thead>
-                                <tr>
-                                    <th>N0</th>
-                                    <th>TUGBOAT NAME</th>
-                                    <th>MASTER TUGBOAT</th>
-                                    <th>START TIME</th>
-                                    <th>END TIME</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table id="myTable" class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>N0</th>
+                                        <th>TUGBOAT NAME</th>
+                                        <th>MASTER TUGBOAT</th>
+                                        <th>START TIME</th>
+                                        <th>END TIME</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -422,42 +450,46 @@
                             <label>PANDU ASSIT IN</label>
                         </div>
                         <div class="card-body">
-                            <table id="example2" class="table table-bordered table-hover">
-                                <thead>
-                                <tr>
-                                    <th>NO</th>
-                                    <th>PANDU NAME</th>
-                                    <th>TIME UP</th>
-                                    <th>TIME DOWN</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                    <td>-</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table id="myTable" class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>NO</th>
+                                        <th>PANDU NAME</th>
+                                        <th>TIME UP</th>
+                                        <th>TIME DOWN</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th>TIME SHIFTING OUT</th>
-                            <th>REMARK - SHIFTING OUT</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>-</td>
-                            <td>-</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>TIME SHIFTING OUT</th>
+                                <th>REMARK - SHIFTING OUT</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <!-- End -->
@@ -504,4 +536,14 @@
 
         </div>
     </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        $(document).ready(function () {
+            let myTable = $("#myTable")
+
+            myTable.DataTable();
+        });
+    </script>
 {% endblock %}
