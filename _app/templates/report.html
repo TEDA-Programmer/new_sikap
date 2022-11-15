@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>TOTAL SHIPMENT PLTU ADIPALA 2022</h2>
+                            <p class="text-muted">Pilih Tahun & Bulan</p>
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <button type="button" class="btn btn-secondary dropdown-toggle"
+                                            data-toggle="dropdown" id="tahun" name="tahun">
+                                        2022
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item"><a href="#">2021</a></li>
+                                        <li class="dropdown-item"><a href="#">2020</a></li>
+                                        <li class="dropdown-item"><a href="#">2019</a></li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="dropdown-item"><a href="#">1945</a></li>
+                                    </ul>
+                                </div>&nbsp;
+
+                                <div class="input-group-prepend">
+                                    <button type="button" class="btn btn-secondary dropdown-toggle"
+                                            data-toggle="dropdown" id="bulan" name="bulan">
+                                        01
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item"><a href="#">02</a></li>
+                                        <li class="dropdown-item"><a href="#">03</a></li>
+                                        <li class="dropdown-item"><a href="#">04</a></li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="dropdown-item"><a href="#">12</a></li>
+                                    </ul>
+                                </div>&nbsp;
+                                <!-- /btn-group -->
+                                <input type="text" class="form-control">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-lg btn-default">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="align-self: center">
+                            <div class="row">
+                                <div class="button-na">
+                                    <button class="btn btn-lg btn-success">PRINT REPORT</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>SHIPMENT SHIP</th>
+                            <th>SHIPER</th>
+                            <th>AGEN</th>
+                            <th>BILL OF LADING</th>
+                            <th>TOTAL FDS</th>
+                            <th>CARGO(BL) M/T</th>
+                            <th>PELABUHAN MUAT/VESSEL STS</th>
+                            <th>KETERANGAN</th>
+                            <th>BERTHED</th>
+                            <th>CASH OF JETTY</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>SPB.SAINTY GOVERNOR</td>
+                            <td>PT. BUKIT ASAM TBK</td>
+                            <td>PT. PELAYARAN BAHTERA ADHIGUNA</td>
+                            <td>300/PSSPJG/VI/2022</td>
+                            <td>10,081.575	</td>
+                            <td>10,081.704</td>
+                            <td>TARAHAN PORT, BANDAR LAMPUNG, INDONESIA	</td>
+                            <td>JENIS CARGO: MRC</td>
+                            <td>JENIS CARGO: MRC</td>
+                            <td>2022-07-04T08:00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>SPB.SAINTY GOVERNOR</td>
+                            <td>PT. BUKIT ASAM TBK</td>
+                            <td>PT. PELAYARAN BAHTERA ADHIGUNA</td>
+                            <td>300/PSSPJG/VI/2022</td>
+                            <td>10,081.575	</td>
+                            <td>10,081.704</td>
+                            <td>TARAHAN PORT, BANDAR LAMPUNG, INDONESIA	</td>
+                            <td>JENIS CARGO: MRC</td>
+                            <td>JENIS CARGO: MRC</td>
+                            <td>2022-07-04T08:00</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>SPB.SAINTY GOVERNOR</td>
+                            <td>PT. BUKIT ASAM TBK</td>
+                            <td>PT. PELAYARAN BAHTERA ADHIGUNA</td>
+                            <td>300/PSSPJG/VI/2022</td>
+                            <td>10,081.575	</td>
+                            <td>10,081.704</td>
+                            <td>TARAHAN PORT, BANDAR LAMPUNG, INDONESIA	</td>
+                            <td>JENIS CARGO: MRC</td>
+                            <td>JENIS CARGO: MRC</td>
+                            <td>2022-07-04T08:00</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>SPB.SAINTY GOVERNOR</td>
+                            <td>PT. BUKIT ASAM TBK</td>
+                            <td>PT. PELAYARAN BAHTERA ADHIGUNA</td>
+                            <td>300/PSSPJG/VI/2022</td>
+                            <td>10,081.575	</td>
+                            <td>10,081.704</td>
+                            <td>TARAHAN PORT, BANDAR LAMPUNG, INDONESIA	</td>
+                            <td>JENIS CARGO: MRC</td>
+                            <td>JENIS CARGO: MRC</td>
+                            <td>2022-07-04T08:00</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>SPB.SAINTY GOVERNOR</td>
+                            <td>PT. BUKIT ASAM TBK</td>
+                            <td>PT. PELAYARAN BAHTERA ADHIGUNA</td>
+                            <td>300/PSSPJG/VI/2022</td>
+                            <td>10,081.575	</td>
+                            <td>10,081.704</td>
+                            <td>TARAHAN PORT, BANDAR LAMPUNG, INDONESIA	</td>
+                            <td>JENIS CARGO: MRC</td>
+                            <td>JENIS CARGO: MRC</td>
+                            <td>2022-07-04T08:00</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+
+            <div class="modal fade" id="modal-xl">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <h4 class="modal-title">SHIPMENT ID 9723 NAMA KAPAL BG ARMADA MAJU 2702</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <!-- small card -->
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <div class="text-center">
+                                                <img src="{{ url_for('static', filename='images/ph_boat-fill.png') }}"
+                                                     alt="">
+                                            </div>
+                                        </div>
+                                        <a href="#" class="small-box-footer text-black">
+                                            Update
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <!-- small card -->
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <div class="text-center">
+                                                <img src="{{ url_for('static', filename='images/material-symbols_directions-boat.png') }}"
+                                                     alt="">
+                                            </div>
+                                        </div>
+                                        <a href="#" class="small-box-footer">Masukan Ke Lineup</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <!-- small card -->
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <div class="text-center">
+                                                <img src="{{ url_for('static', filename='images/cil_boat-alt.png') }}"
+                                                     alt="">
+                                            </div>
+                                        </div>
+                                        <a href="#" class="small-box-footer">Masukan Sebagai Vessel STS</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <!-- small card -->
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <div class="text-center">
+                                                <img src="{{ url_for('static', filename='images/map_boat-ramp.png') }}"
+                                                     alt="">
+                                            </div>
+                                        </div>
+                                        <a href="#" class="small-box-footer">Masukan Sebagai Tongkang ke STS</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+        </div>
+    </div>
+{% endblock %}

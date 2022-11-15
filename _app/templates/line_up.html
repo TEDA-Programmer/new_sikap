@@ -25,47 +25,59 @@
                     <h4>SHIFTING OUT AT JETTY ADIPALA</h4>
                 </div>
                 <div class="card-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th>NO</th>
-                            <th>SHIPMENT SHIP</th>
-                            <th>SHIPPER</th>
-                            <th>AGEN</th>
-                            <th>B/L NUMBER</th>
-                            <th>CARGO WEIGHT</th>
-                            <th>PORT OF LOADING</th>
-                            <th>TIME ARRIVAL</th>
-                            <th>TIME BERTHING</th>
-                            <th>TIME SHIFTING OUT</th>
-                            <th>REMARKS</th>
-                            <th>OPTION</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>JOYO BOYO SHIP</td>
-                            <td>JACK SPARROW</td>
-                            <td>PT TARAKAN SUKMA</td>
-                            <td>gf5u786fytft6</td>
-                            <td>28,000,000 M/T</td>
-                            <td>TANJUNG BARA INDONESIA</td>
-                            <td>2022-07-13T 09:00</td>
-                            <td>2022-07-13T 12:00</td>
-                            <td>2022-07-13T 14:00</td>
-                            <td>TEST SO</td>
-                            <td>
-                                <div class="btn-group">
-                                    <a href="" class="btn btn-info" data-toggle="modal"
-                                       data-target="#modal-xl"><img class="img-sm" src="{{ url_for('static', filename='images/Vector.png') }}" alt=""></a>&nbsp;
-                                    <a href="" class="btn btn-danger"><img class="img-sm" src="{{ url_for('static', filename='images/icon_30.png') }}" alt=""></a>&nbsp;
-                                    <a href="" class="btn btn-success"><img class="img-sm" src="{{ url_for('static', filename='images/icon_25.png') }}" alt=""></a>
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-bordered">
+
+                            <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>SHIPMENT SHIP</th>
+                                <th>SHIPPER</th>
+                                <th>AGEN</th>
+                                <th>B/L NUMBER</th>
+                                <th>CARGO WEIGHT</th>
+                                <th>PORT OF LOADING</th>
+                                <th>TIME ARRIVAL</th>
+                                <th>TIME BERTHING</th>
+                                <th>TIME SHIFTING OUT</th>
+                                <th>REMARKS</th>
+                                <th>OPTION</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>MV. HABCO PIONEER</td>
+                                <td>PT. BORNEO INDOBARA ( KONSORSIUM PT. EXPLOITASI ENERGI INDONESIA DAN PT. BORNEO
+                                    INDOBARA
+                                    )
+                                </td>
+                                <td>PT. PELAYARAN BAHTERA ADHIGUNA</td>
+                                <td>250BUTIDN22</td>
+                                <td>29,200.000 M/T</td>
+                                <td>BUNATI ANCHORAGE, SOUTH KALIMANTAN, INDONESIA</td>
+                                <td>2022-07-13T 09:00</td>
+                                <td>2022-07-13T 12:00</td>
+                                <td>2022-07-13T 14:00</td>
+                                <td>TEST SO</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="" class="btn btn-info" data-toggle="modal"
+                                           data-target="#modal-xl"><img class="img-sm"
+                                                                        src="{{ url_for('static', filename='images/Vector.png') }}"
+                                                                        alt=""></a>&nbsp;
+                                        <a href="" class="btn btn-danger"><img class="img-sm"
+                                                                               src="{{ url_for('static', filename='images/icon_30.png') }}"
+                                                                               alt=""></a>&nbsp;
+                                        <a href="" class="btn btn-success"><img class="img-sm"
+                                                                                src="{{ url_for('static', filename='images/icon_25.png') }}"
+                                                                                alt=""></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -74,53 +86,61 @@
                     <h4>BHERTED AT JETTY ADIPALA</h4>
                 </div>
                 <div class="card-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th>NO</th>
-                            <th>SHIPMENT SHIP</th>
-                            <th>SHIPPER</th>
-                            <th>AGEN</th>
-                            <th>B/L NUMBER</th>
-                            <th>CARGO WEIGHT</th>
-                            <th>PORT OF LOADING</th>
-                            <th>TIME ARRIVAL(TA)</th>
-                            <th>START FROM ANCHORAGE</th>
-                            <th>TIME BERTED</th>
-                            <th>APROACH TIME</th>
-                            <th>NOR TENDERED</th>
-                            <th>NOR ACCEPTED</th>
-                            <th>COMMENCE DISCHARGE</th>
-                            <th>EST COMPLETED</th>
-                            <th>EST CAST OF JETTY</th>
-                            <th>REMARKS</th>
-                            <th>OPTION</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>JOYO BOYO SHIP</td>
-                            <td>JACK SPARROW</td>
-                            <td>AGEN TARAKAN SUKMA</td>
-                            <td>gf5u786fytft6</td>
-                            <td>18,000,000 M/T</td>
-                            <td>TANJUNG BARA INDONESIA</td>
-                            <td>2022-07-13T 09:00</td>
-                            <td>2022-07-13T 12:00</td>
-                            <td>2022-07-13T 14:00</td>
-                            <td>TEST SO</td>
-                            <td>
-                                <div class="btn-group">
-                                    <a href="" class="btn btn-info" data-toggle="modal"
-                                       data-target="#modal-xl"><img class="img-sm" src="{{ url_for('static', filename='images/Vector.png') }}" alt=""></a>&nbsp;
-                                    <a href="" class="btn btn-info"><img class="img-sm" src="{{ url_for('static', filename='images/icon_31.png') }}" alt=""></a>&nbsp;
-                                    <a href="" class="btn btn-primary"><img class="img-sm" src="{{ url_for('static', filename='images/icon_32.png') }}" alt=""></a>
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>SHIPMENT SHIP</th>
+                                <th>SHIPPER</th>
+                                <th>AGEN</th>
+                                <th>B/L NUMBER</th>
+                                <th>CARGO WEIGHT</th>
+                                <th>PORT OF LOADING</th>
+                                <th>TIME ARRIVAL(TA)</th>
+                                <th>START FROM ANCHORAGE</th>
+                                <th>TIME BERTED</th>
+                                <th>APROACH TIME</th>
+                                <th>NOR TENDERED</th>
+                                <th>NOR ACCEPTED</th>
+                                <th>COMMENCE DISCHARGE</th>
+                                <th>EST COMPLETED</th>
+                                <th>EST CAST OF JETTY</th>
+                                <th>REMARKS</th>
+                                <th>OPTION</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>JOYO BOYO SHIP</td>
+                                <td>JACK SPARROW</td>
+                                <td>AGEN TARAKAN SUKMA</td>
+                                <td>gf5u786fytft6</td>
+                                <td>18,000,000 M/T</td>
+                                <td>TANJUNG BARA INDONESIA</td>
+                                <td>2022-07-13T 09:00</td>
+                                <td>2022-07-13T 12:00</td>
+                                <td>2022-07-13T 14:00</td>
+                                <td>TEST SO</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="" class="btn btn-info" data-toggle="modal"
+                                           data-target="#modal-xl"><img class="img-sm"
+                                                                        src="{{ url_for('static', filename='images/Vector.png') }}"
+                                                                        alt=""></a>&nbsp;
+                                        <a href="" class="btn btn-info"><img class="img-sm"
+                                                                             src="{{ url_for('static', filename='images/icon_31.png') }}"
+                                                                             alt=""></a>&nbsp;
+                                        <a href="" class="btn btn-primary"><img class="img-sm"
+                                                                                src="{{ url_for('static', filename='images/icon_32.png') }}"
+                                                                                alt=""></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -129,103 +149,124 @@
                     <h4>ANCHORAGE AT OUTBAR ADIPALA, WAIT INSTRUCTION FOR BERTHING</h4>
                 </div>
                 <div class="card-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th>NO</th>
-                            <th>SHIPMENT SHIP</th>
-                            <th>SHIPPER</th>
-                            <th>AGEN</th>
-                            <th>B/L NUMBER</th>
-                            <th>CARGO WEIGHT</th>
-                            <th>PORT OF LOADING</th>
-                            <th>TIME ARRIVAL</th>
-                            <th>ESTBERTHED</th>
-                            <th>REMARKS</th>
-                            <th>OPTION</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>JOYO BOYO SHIP</td>
-                            <td>JACK SPARROW</td>
-                            <td>PT TARAKAN SUKMA</td>
-                            <td>gf5u786fytft6</td>
-                            <td>4,876,000</td>
-                            <td>TANJUNG BARA INDONESIA</td>
-                            <td>2022-07-13T 12:00</td>
-                            <td>2022-07-13T 14:00</td>
-                            <td>TEST SO</td>
-                            <td>
-                                <div class="btn-group">
-                                   <a href="" class="btn btn-info" data-toggle="modal"
-                                       data-target="#modal-xl"><img class="img-sm" src="{{ url_for('static', filename='images/Vector.png') }}" alt=""></a>&nbsp;&nbsp;
-                                    <a href="" class="btn btn-success"><img class="img-sm" src="{{ url_for('static', filename='images/icon_25.png') }}" alt=""></a>
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>SHIPMENT SHIP</th>
+                                <th>SHIPPER</th>
+                                <th>AGEN</th>
+                                <th>B/L NUMBER</th>
+                                <th>CARGO WEIGHT</th>
+                                <th>PORT OF LOADING</th>
+                                <th>TIME ARRIVAL</th>
+                                <th>ESTBERTHED</th>
+                                <th>REMARKS</th>
+                                <th>OPTION</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>JOYO BOYO SHIP</td>
+                                <td>JACK SPARROW</td>
+                                <td>PT TARAKAN SUKMA</td>
+                                <td>gf5u786fytft6</td>
+                                <td>4,876,000</td>
+                                <td>TANJUNG BARA INDONESIA</td>
+                                <td>2022-07-13T 12:00</td>
+                                <td>2022-07-13T 14:00</td>
+                                <td>TEST SO</td>
+                                <td>
+                                    <div class="btn-group">
+                                        <a href="" class="btn btn-info" data-toggle="modal"
+                                           data-target="#modal-xl"><img class="img-sm"
+                                                                        src="{{ url_for('static', filename='images/Vector.png') }}"
+                                                                        alt=""></a>&nbsp;&nbsp;
+                                        <a href="" class="btn btn-success"><img class="img-sm"
+                                                                                src="{{ url_for('static', filename='images/icon_25.png') }}"
+                                                                                alt=""></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+
                 <div class="card-header">
                     <h4>TUGBOAT AND BARGE LOADING ON VESSEL MV ABDUL HAMID</h4>
                 </div>
                 <div class="card-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th>NO</th>
-                            <th>TUGBOAT-BARGE</th>
-                            <th>SHIPPER</th>
-                            <th>AGEN</th>
-                            <th>ARRIVAL AT ANCHORAGE</th>
-                            <th>TENIVAL AT ANCHORAGE</th>
-                            <th>COMMANCE LOADING DISCH</th>
-                            <th>COMMANCE LOADING DISCH</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>TUGBOAT-BARGE</th>
+                                <th>SHIPPER</th>
+                                <th>AGEN</th>
+                                <th>ARRIVAL AT ANCHORAGE</th>
+                                <th>TENIVAL AT ANCHORAGE</th>
+                                <th>COMMANCE LOADING DISCH</th>
+                                <th>COMMANCE LOADING DISCH</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <div class="card-header">
                     <h4>SAILING STS ADIPALA</h4>
                 </div>
                 <div class="card-body">
-                    <table id="example2" class="table table-bordered table-hover">
-                        <thead>
-                        <tr>
-                            <th>NO</th>
-                            <th>VESSEL STS</th>
-                            <th>SHIPPER</th>
-                            <th>AGEN</th>
-                            <th>B/L NUMBER</th>
-                            <th>CARGO WEIGHT</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table id="myTable" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>VESSEL STS</th>
+                                <th>SHIPPER</th>
+                                <th>AGEN</th>
+                                <th>B/L NUMBER</th>
+                                <th>CARGO WEIGHT</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        $(document).ready(function () {
+            let myTable = $("#myTable")
+
+            myTable.DataTable();
+        });
+    </script>
 {% endblock %}

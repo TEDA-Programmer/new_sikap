@@ -78,3 +78,11 @@ def bargelongtowing():
         return render_template("barge_long_towing.html")
     except TemplateNotFound:
         abort(404)
+
+
+@main_v.route("/report")
+def report():
+    try:
+        return render_template("report.html")
+    except TemplateNotFound:
+        abort(404)
