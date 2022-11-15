@@ -54,3 +54,27 @@ def longtowing():
         return render_template("long_towing.html")
     except TemplateNotFound:
         abort(404)
+
+
+@main_v.route("/m-vessel-sts")
+def mvesselsts():
+    try:
+        return render_template("m_vessel_sts.html")
+    except TemplateNotFound:
+        abort(404)
+
+
+@main_v.route("/barge-sts")
+def bargests():
+    try:
+        return render_template("barge_sts.html")
+    except TemplateNotFound:
+        abort(404)
+
+
+@main_v.route("/barge-long-towing")
+def bargelongtowing():
+    try:
+        return render_template("barge_long_towing.html")
+    except TemplateNotFound:
+        abort(404)
