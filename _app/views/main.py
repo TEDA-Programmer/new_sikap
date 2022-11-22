@@ -86,3 +86,11 @@ def report():
         return render_template("report.html")
     except TemplateNotFound:
         abort(404)
+
+
+@main_v.route("/upload")
+def upload():
+    try:
+        return render_template("upload.html")
+    except TemplateNotFound:
+        abort(404)
